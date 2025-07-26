@@ -1,0 +1,107 @@
+body{
+    background-color: bisque;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px black;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+h1{
+    font-style: italic;
+}
+
+.center-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: bisque;
+}
+
+/* This container will hold both video and text side by side */
+.video-content {
+    display: flex;           /* Makes children align horizontally */
+    align-items: center;     /* Centers items vertically */
+    gap: 30px;              /* Adds space between video and text */
+    max-width: 1200px;      /* Maximum width of the container */
+    margin: 0 auto;         /* Centers the container */
+    padding: 20px;          /* Space around the container */
+}
+
+/* Styles for the text section next to the video */
+.video-text {
+    flex: 1;               /* Allows text section to take available space */
+    padding: 0px;         /* Space inside the text section */
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse;    /* Reverses the order of items */
+    justify-content: flex-start;    /* Aligns content to the right side */
+    gap: 30px;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;             /* Pushes the container to the right */
+}
+
+/* Styles for the text section in the right-aligned container */
+.video-text-right {
+    flex: 1;
+    padding: 20px;
+    order: 2;                      /* Controls the order of items in flex container */
+}
+
+/* Styles for the playlist section */
+.playlist-container {
+    display: flex;
+    overflow-x: auto;           /* Enables horizontal scrolling */
+    gap: 20px;                 /* Space between playlists */
+    padding: 30px;
+    scroll-behavior: smooth;    /* Smooth scrolling effect */
+    background-color: #ffffff3d;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Individual playlist item */
+.playlist-item {
+    min-width: 300px;          /* Fixed width for each playlist */
+    transition: all 0.3s ease;  /* Smooth transition for hover effects */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Hover effect for playlists */
+.playlist-item:hover {
+    transform: scale(1.05);     /* Makes playlist slightly larger */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Hide scrollbar but keep functionality */
+.playlist-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.playlist-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.playlist-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.playlist-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
